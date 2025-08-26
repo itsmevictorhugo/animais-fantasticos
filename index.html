@@ -6,326 +6,382 @@
     <title>Animais Fantásticos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="http://fonts.googleapis.com/css?family=Playfair+Display+SC"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display+SC"
       rel="stylesheet"
     />
     <script>
       document.documentElement.className += " js";
     </script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
-    <nav class="menu js-menu">
-      <ul>
-        <li><a href="#animais">animais</a></li>
-        <li><a href="#faq">Faq</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li>
-          <a href="https://github.com/itsmevictorhugo/animais-fantasticos"
-            >Dev →</a
-          >
-        </li>
-      </ul>
-    </nav>
+    <div class="grid-container">
+      <nav class="menu" data-menu="suave">
+        <button
+          type="button"
+          data-menu="button"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          Menu
+        </button>
+        <ul data-menu="list" id="menu">
+          <li><a href="#animais">Animais</a></li>
+          <li data-dropdown>
+            <a href="sobre.html">Sobre</a>
+            <ul class="dropdown-menu">
+              <li><a href="empresa.html">A Empresa</a></li>
+              <li><a href="equipe.html">Equipe</a></li>
+              <li><a href="socios.html">Sócios</a></li>
+              <li><a href="investidores.html">Investidores</a></li>
+            </ul>
+          </li>
+          <li><a href="#faq">Faq</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a data-modal="abrir" href="login.html">Login →</a></li>
+          <li>
+            <a href="https://github.com/itsmevictorhugo/animais-fantasticos"
+              >Dev →</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="grid-section animais" data-anime="scroll" id="animais">
+        <h1 class="titulo">Animais Fantásticos</h1>
+        <ul class="animais-lista" data-tab="menu">
+          <li>
+            <img src="img/imagem1.jpg" alt="Raposa" />
+          </li>
+          <li>
+            <img src="img/imagem2.jpg" alt="Esquilo" />
+          </li>
+          <li>
+            <img src="img/imagem3.jpg" alt="Urso" />
+          </li>
+          <li>
+            <img src="img/imagem4.jpg" alt="Lobo" />
+          </li>
+          <li>
+            <img src="img/imagem5.jpg" alt="Macaco" />
+          </li>
+          <li>
+            <img src="img/imagem6.jpg" alt="Leão" />
+          </li>
+        </ul>
+        <div class="animais-descricao" data-tab="content">
+          <section data-anime="show-right">
+            <h2>Raposa</h2>
+            <p>
+              As raposas são mamíferos da família dos canídeos, como os cães e
+              lobos. A espécie mais conhecida é a raposa-vermelha (Vulpes
+              vulpes), encontrada em diversas regiões do hemisfério norte. Elas
+              possuem corpo esguio, focinho fino, orelhas pontudas e uma cauda
+              longa e peluda, que serve para equilíbrio e comunicação.
+            </p>
+            <p>
+              Muito adaptáveis, as raposas vivem em florestas, campos, desertos
+              e até cidades. São carnívoras oportunistas e comem de tudo:
+              pequenos animais, frutas, insetos e até lixo humano. Costumam
+              caçar sozinhas e são bastante silenciosas, embora emitam sons
+              variados para se comunicar.
+            </p>
+            <p>
+              Culturalmente, a raposa é símbolo de esperteza em várias
+              tradições, como a japonesa e a europeia. Apesar de algumas
+              espécies serem caçadas ou sofrerem com a perda de habitat, muitas
+              ainda têm populações estáveis. Elas desempenham um papel
+              importante no controle de pragas e na manutenção do equilíbrio
+              ecológico.
+            </p>
+          </section>
 
-    <section class="grid-section animais js-scroll" id="animais" data-texto="Teste">
-      <h1 class="titulo">Animais Fantásticos</h1>
-      <ul class="animais-lista js-tabmenu">
-        <li>
-          <img src="img/imagem1.jpg" alt="Raposa" />
-        </li>
-        <li>
-          <img src="img/imagem2.jpg" alt="Esquilo" />
-        </li>
-        <li>
-          <img src="img/imagem3.jpg" alt="Urso" />
-        </li>
-        <li>
-          <img src="img/imagem4.jpg" alt="Lobo" />
-        </li>
-        <li>
-          <img src="img/imagem5.jpg" alt="Macaco" />
-        </li>
-        <li>
-          <img src="img/imagem6.jpg" alt="Leão" />
-        </li>
-      </ul>
-      <div class="animais-descricao js-tabcontent">
-        <section>
-          <h2>Raposa</h2>
-          <p>
-            As raposas são mamíferos da família dos canídeos, como os cães e
-            lobos. A espécie mais conhecida é a raposa-vermelha (Vulpes vulpes),
-            encontrada em diversas regiões do hemisfério norte. Elas possuem
-            corpo esguio, focinho fino, orelhas pontudas e uma cauda longa e
-            peluda, que serve para equilíbrio e comunicação.
-          </p>
-          <p>
-            Muito adaptáveis, as raposas vivem em florestas, campos, desertos e
-            até cidades. São carnívoras oportunistas e comem de tudo: pequenos
-            animais, frutas, insetos e até lixo humano. Costumam caçar sozinhas
-            e são bastante silenciosas, embora emitam sons variados para se
-            comunicar.
-          </p>
-          <p>
-            Culturalmente, a raposa é símbolo de esperteza em várias tradições,
-            como a japonesa e a europeia. Apesar de algumas espécies serem
-            caçadas ou sofrerem com a perda de habitat, muitas ainda têm
-            populações estáveis. Elas desempenham um papel importante no
-            controle de pragas e na manutenção do equilíbrio ecológico.
-          </p>
-        </section>
-        <section>
-          <h2>Esquilo</h2>
-          <p>
-            Os esquilos são roedores da família Sciuridae e vivem em diferentes
-            partes do mundo, especialmente em florestas e áreas arborizadas.
-            Eles se destacam pelo corpo ágil, cauda longa e peluda, e dentes
-            incisivos fortes, ideais para roer sementes e nozes.
-          </p>
-          <p>
-            São animais diurnos e muito ativos, conhecidos por sua habilidade de
-            escalar árvores e saltar de galho em galho. Esquilos também têm o
-            hábito de guardar alimentos no solo ou em troncos ocos para consumir
-            no inverno, mostrando um comportamento de planejamento raro entre
-            roedores.
-          </p>
-          <p>
-            Existem mais de 200 espécies de esquilos, incluindo os arborícolas,
-            terrestres e voadores. Embora geralmente sejam bem vistos, podem
-            causar pequenos danos em plantações ou estruturas quando vivem perto
-            de áreas urbanas. Ainda assim, são importantes para a natureza,
-            ajudando a espalhar sementes e regenerar florestas.
-          </p>
-        </section>
-        <section>
-          <h2>Urso</h2>
-          <p>
-            Os ursos são grandes mamíferos pertencentes à família Ursidae.
-            Existem oito espécies no mundo, incluindo o urso-pardo, o urso-polar
-            e o urso-negro. Eles têm corpo robusto, patas fortes com garras
-            grandes e um olfato extremamente apurado, que os ajuda na busca por
-            alimento.
-          </p>
-          <p>
-            São onívoros e têm uma dieta variada, que pode incluir frutas,
-            peixes, insetos, mel e pequenos animais. Algumas espécies, como o
-            urso-polar, são mais carnívoras, enquanto outras, como o
-            panda-gigante, se alimentam quase exclusivamente de bambu. Em
-            regiões frias, os ursos costumam hibernar durante o inverno para
-            economizar energia.
-          </p>
-          <p>
-            Apesar de sua aparência imponente, a maioria dos ursos evita contato
-            com humanos. No entanto, a destruição de habitats e a caça ilegal
-            representam ameaças sérias a algumas espécies. Eles exercem um papel
-            ecológico importante e são considerados símbolos de força e
-            resistência em muitas culturas.
-          </p>
-        </section>
-        <section>
-          <h2>Lobo</h2>
-          <p>
-            Os lobos são mamíferos carnívoros da família dos canídeos, os mesmos
-            dos cães. A espécie mais conhecida é o lobo-cinzento (Canis lupus),
-            que vive em regiões da América do Norte, Europa e Ásia. Eles têm
-            corpo forte, focinho alongado, orelhas eretas e são cobertos por uma
-            pelagem densa que varia do branco ao cinza-escuro.
-          </p>
-          <p>
-            Lobos são animais sociais que vivem e caçam em bandos organizados,
-            liderados por um casal dominante. Caçam em grupo para derrubar
-            presas maiores, como cervos e alces. Também se comunicam por meio de
-            uivos, latidos e linguagem corporal, reforçando os laços da matilha.
-          </p>
-          <p>
-            Durante muito tempo foram perseguidos por medo ou conflito com a
-            pecuária, mas hoje são protegidos em muitos países. Além de seu
-            papel como predadores no equilíbrio ecológico, os lobos têm grande
-            importância cultural, aparecendo em lendas e histórias como símbolos
-            de coragem, mistério ou liberdade.
-          </p>
-        </section>
-        <section>
-          <h2>Macaco</h2>
-          <p>
-            Os macacos são primatas pertencentes à ordem dos Primates, assim
-            como os humanos. Existem mais de 250 espécies conhecidas, divididas
-            em dois grandes grupos: os do Velho Mundo (África e Ásia) e os do
-            Novo Mundo (Américas). Eles variam bastante em tamanho, aparência e
-            comportamento, mas quase todos têm mãos ágeis, boa visão e cérebro
-            desenvolvido.
-          </p>
-          <p>
-            São animais inteligentes, sociais e ativos. Vivem em grupos e se
-            comunicam por sons, gestos e expressões faciais. A maioria das
-            espécies é arborícola, ou seja, vive nas árvores, onde se alimenta
-            principalmente de frutas, folhas, sementes e pequenos insetos.
-          </p>
-          <p>
-            Apesar de sua agilidade e inteligência, muitos macacos enfrentam
-            ameaças como a destruição das florestas e o tráfico de animais.
-            Algumas espécies estão em risco de extinção. Por isso, a proteção de
-            seus habitats e o combate à caça ilegal são essenciais para sua
-            conservação.
-          </p>
-        </section>
-        <section>
-          <h2>Leão</h2>
-          <p>
-            O leão (Panthera leo) é um dos maiores felinos do mundo e vive
-            principalmente nas savanas da África. É conhecido por sua juba
-            imponente (nos machos), rugido forte e comportamento social, algo
-            incomum entre os grandes felinos. Os leões vivem em grupos chamados
-            alcateias ou bandos, compostos por fêmeas, filhotes e alguns machos
-            adultos.
-          </p>
-          <p>
-            As fêmeas são as principais caçadoras do grupo, atacando presas como
-            zebras, gnus e búfalos. Já os machos ajudam a proteger o território
-            e a alcateia de rivais. Leões costumam descansar por muitas horas do
-            dia, especialmente durante o calor, e são mais ativos ao amanhecer e
-            anoitecer.
-          </p>
-          <p>
-            Apesar de serem considerados os "reis da selva", os leões enfrentam
-            várias ameaças, como a perda de habitat, conflitos com humanos e a
-            caça ilegal. Hoje, sua população está em declínio em muitas regiões,
-            e sua conservação depende de esforços conjuntos entre governos,
-            comunidades locais e organizações ambientais.
-          </p>
-        </section>
+          <section data-anime="show-right">
+            <h2>Esquilo</h2>
+            <p>
+              Os esquilos são roedores da família Sciuridae e vivem em
+              diferentes partes do mundo, especialmente em florestas e áreas
+              arborizadas. Eles se destacam pelo corpo ágil, cauda longa e
+              peluda, e dentes incisivos fortes, ideais para roer sementes e
+              nozes.
+            </p>
+            <p>
+              São animais diurnos e muito ativos, conhecidos por sua habilidade
+              de escalar árvores e saltar de galho em galho. Esquilos também têm
+              o hábito de guardar alimentos no solo ou em troncos ocos para
+              consumir no inverno, mostrando um comportamento de planejamento
+              raro entre roedores.
+            </p>
+            <p>
+              Existem mais de 200 espécies de esquilos, incluindo os
+              arborícolas, terrestres e voadores. Embora geralmente sejam bem
+              vistos, podem causar pequenos danos em plantações ou estruturas
+              quando vivem perto de áreas urbanas. Ainda assim, são importantes
+              para a natureza, ajudando a espalhar sementes e regenerar
+              florestas.
+            </p>
+          </section>
+          <section data-anime="show-down">
+            <h2>Urso</h2>
+            <p>
+              Os ursos são grandes mamíferos pertencentes à família Ursidae.
+              Existem oito espécies no mundo, incluindo o urso-pardo, o
+              urso-polar e o urso-negro. Eles têm corpo robusto, patas fortes
+              com garras grandes e um olfato extremamente apurado, que os ajuda
+              na busca por alimento.
+            </p>
+            <p>
+              São onívoros e têm uma dieta variada, que pode incluir frutas,
+              peixes, insetos, mel e pequenos animais. Algumas espécies, como o
+              urso-polar, são mais carnívoras, enquanto outras, como o
+              panda-gigante, se alimentam quase exclusivamente de bambu. Em
+              regiões frias, os ursos costumam hibernar durante o inverno para
+              economizar energia.
+            </p>
+            <p>
+              Apesar de sua aparência imponente, a maioria dos ursos evita
+              contato com humanos. No entanto, a destruição de habitats e a caça
+              ilegal representam ameaças sérias a algumas espécies. Eles exercem
+              um papel ecológico importante e são considerados símbolos de força
+              e resistência em muitas culturas.
+            </p>
+          </section>
+          <section data-anime="show-down">
+            <h2>Lobo</h2>
+            <p>
+              Os lobos são mamíferos carnívoros da família dos canídeos, os
+              mesmos dos cães. A espécie mais conhecida é o lobo-cinzento (Canis
+              lupus), que vive em regiões da América do Norte, Europa e Ásia.
+              Eles têm corpo forte, focinho alongado, orelhas eretas e são
+              cobertos por uma pelagem densa que varia do branco ao
+              cinza-escuro.
+            </p>
+            <p>
+              Lobos são animais sociais que vivem e caçam em bandos organizados,
+              liderados por um casal dominante. Caçam em grupo para derrubar
+              presas maiores, como cervos e alces. Também se comunicam por meio
+              de uivos, latidos e linguagem corporal, reforçando os laços da
+              matilha.
+            </p>
+            <p>
+              Durante muito tempo foram perseguidos por medo ou conflito com a
+              pecuária, mas hoje são protegidos em muitos países. Além de seu
+              papel como predadores no equilíbrio ecológico, os lobos têm grande
+              importância cultural, aparecendo em lendas e histórias como
+              símbolos de coragem, mistério ou liberdade.
+            </p>
+          </section>
+          <section data-anime="show-right">
+            <h2>Macaco</h2>
+            <p>
+              Os macacos são primatas pertencentes à ordem dos Primates, assim
+              como os humanos. Existem mais de 250 espécies conhecidas,
+              divididas em dois grandes grupos: os do Velho Mundo (África e
+              Ásia) e os do Novo Mundo (Américas). Eles variam bastante em
+              tamanho, aparência e comportamento, mas quase todos têm mãos
+              ágeis, boa visão e cérebro desenvolvido.
+            </p>
+            <p>
+              São animais inteligentes, sociais e ativos. Vivem em grupos e se
+              comunicam por sons, gestos e expressões faciais. A maioria das
+              espécies é arborícola, ou seja, vive nas árvores, onde se alimenta
+              principalmente de frutas, folhas, sementes e pequenos insetos.
+            </p>
+            <p>
+              Apesar de sua agilidade e inteligência, muitos macacos enfrentam
+              ameaças como a destruição das florestas e o tráfico de animais.
+              Algumas espécies estão em risco de extinção. Por isso, a proteção
+              de seus habitats e o combate à caça ilegal são essenciais para sua
+              conservação.
+            </p>
+          </section>
+          <section data-anime="show-right">
+            <h2>Leão</h2>
+            <p>
+              O leão (Panthera leo) é um dos maiores felinos do mundo e vive
+              principalmente nas savanas da África. É conhecido por sua juba
+              imponente (nos machos), rugido forte e comportamento social, algo
+              incomum entre os grandes felinos. Os leões vivem em grupos
+              chamados alcateias ou bandos, compostos por fêmeas, filhotes e
+              alguns machos adultos.
+            </p>
+            <p>
+              As fêmeas são as principais caçadoras do grupo, atacando presas
+              como zebras, gnus e búfalos. Já os machos ajudam a proteger o
+              território e a alcateia de rivais. Leões costumam descansar por
+              muitas horas do dia, especialmente durante o calor, e são mais
+              ativos ao amanhecer e anoitecer.
+            </p>
+            <p>
+              Apesar de serem considerados os "reis da selva", os leões
+              enfrentam várias ameaças, como a perda de habitat, conflitos com
+              humanos e a caça ilegal. Hoje, sua população está em declínio em
+              muitas regiões, e sua conservação depende de esforços conjuntos
+              entre governos, comunidades locais e organizações ambientais.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <section class="grid-section faq" data-anime="scroll" id="faq">
+        <h1 class="titulo">FAQ</h1>
+        <dl class="faq-lista" data-anime="accordion">
+          <dt>Qual a idade dos animais?</dt>
+          <dd>
+            Em um refúgio de animais resgatados, diferentes espécies convivem em
+            segurança, longe das ameaças da natureza e da ação humana. Entre os
+            moradores mais astutos está a raposa, que na natureza vive apenas
+            entre 3 e 6 anos, mas em um ambiente protegido pode alcançar os 10
+            ou até 12 anos. Sua cauda volumosa e seus olhos atentos fazem dela
+            uma figura curiosa e observadora entre os outros animais. Saltando
+            entre os galhos, os esquilos dão vida ao santuário com sua energia
+            constante. Enquanto na natureza vivem de 5 a 10 anos, aqui podem
+            ultrapassar os 12 ou até 15 anos, graças à alimentação regular e à
+            ausência de predadores. Já os imponentes ursos, como o urso-pardo ou
+            o urso-negro, vivem em média 20 a 25 anos no mundo selvagem, mas em
+            cativeiro seguro podem atingir até 35 anos, envelhecendo com
+            dignidade e tranquilidade. Na parte mais silenciosa do abrigo, os
+            lobos se mantêm atentos, sempre em grupo. Costumam viver de 6 a 8
+            anos na natureza, mas sob cuidados humanos chegam facilmente aos 12
+            ou 15. Os macacos, com sua variedade de espécies, têm diferentes
+            expectativas: um macaco-prego, por exemplo, pode viver até 20 anos
+            solto e mais de 40 em cativeiro. Já os leões, reis da savana,
+            encontram aqui um novo reino. Enquanto na natureza vivem de 10 a 14
+            anos, neste refúgio alguns alcançam ou superam os 20 anos, rugindo
+            mais baixo, mas com a mesma imponência de sempre.
+          </dd>
+          <dt>Eles são fantásticos?</dt>
+          <dd>
+            Esses animais são realmente fantásticos por suas características
+            únicas e seu papel essencial na natureza. A raposa se destaca pela
+            astúcia e adaptabilidade, vivendo em ambientes variados e caçando de
+            forma estratégica. Os esquilos, pequenos e ágeis, ajudam a regenerar
+            as florestas ao espalhar sementes, além de serem muito organizados
+            ao armazenar seu alimento. Já os ursos unem força e sensibilidade,
+            mostrando comportamentos complexos como o cuidado com os filhotes e
+            a memória de locais ricos em alimento. Os lobos impressionam pela
+            vida social estruturada em matilhas, onde a comunicação e a
+            cooperação são fundamentais para a sobrevivência e a caça em grupo.
+            Os macacos, inteligentes e sociáveis, utilizam ferramentas, aprendem
+            com seus pares e demonstram emoções que refletem sua proximidade
+            evolutiva conosco. Por fim, o leão simboliza força e coragem,
+            vivendo em grupos protegidos e impondo respeito com seu rugido
+            poderoso e sua postura nobre. Juntos, esses animais não só
+            enriquecem os ecossistemas em que vivem, mas também inspiram o ser
+            humano pela sua inteligência, organização e beleza, mostrando como a
+            diversidade da vida é surpreendente e essencial para o equilíbrio do
+            planeta.
+          </dd>
+          <dt>Qual a diferença?</dt>
+          <dd>
+            Esses animais são bastante diferentes entre si, tanto em aparência
+            quanto em comportamento e habitat. As raposas são canídeos esguios,
+            solitários e adaptáveis, que vivem em vários ambientes e caçam
+            principalmente sozinhas. Já os esquilos são roedores pequenos e
+            ágeis, especializados em viver nas árvores e armazenar alimentos,
+            com uma dieta mais voltada para sementes e frutas. Os ursos são
+            grandes mamíferos onívoros, com força impressionante e hábitos que
+            variam de espécie para espécie, desde a alimentação quase
+            exclusivamente vegetal do panda até o estilo de vida do urso-polar,
+            que é mais carnívoro. Diferente deles, os lobos são animais sociais,
+            vivem em matilhas e dependem da caça cooperativa para capturar
+            presas maiores. Os macacos, por sua vez, são primatas muito
+            inteligentes e sociais, que geralmente vivem em grupos complexos e
+            têm comportamentos sofisticados, como o uso de ferramentas.
+            Finalmente, os leões são grandes felinos que também vivem em grupos,
+            mas com uma organização social bem distinta, onde as fêmeas caçam e
+            os machos defendem o território. Enquanto raposas e esquilos são
+            pequenos e rápidos, ursos, lobos e leões são maiores e mais fortes,
+            cada um com estratégias e hábitos específicos que refletem sua
+            adaptação ao ambiente.
+          </dd>
+          <dt>Como proteger?</dt>
+          <dd>
+            Proteger esses animais é essencial para manter o equilíbrio
+            ecológico e garantir que eles continuem desempenhando seu papel
+            vital na natureza. A primeira medida crucial é a preservação dos
+            habitats naturais. Florestas, savanas e áreas selvagens precisam ser
+            protegidas contra o desmatamento e a degradação. Apoiar a criação de
+            reservas naturais, parques nacionais e corredores ecológicos ajuda a
+            manter os ecossistemas intactos, permitindo que essas espécies
+            continuem vivendo em seu ambiente natural. A caça ilegal e o tráfico
+            de animais também representam grandes ameaças. Muitas dessas
+            espécies são perseguidas por sua pele, partes do corpo ou
+            simplesmente para o comércio ilegal. Combater essa prática é
+            fundamental, o que envolve aumentar a fiscalização e apoiar
+            campanhas de sensibilização pública sobre o impacto negativo do
+            tráfico e da caça ilegal. Além disso, a educação ambiental
+            desempenha um papel importante. Conscientizar a população sobre a
+            importância da biodiversidade e do respeito aos animais ajuda a
+            criar uma cultura de preservação. É essencial promover o uso
+            sustentável dos recursos naturais e o combate ao desmatamento e ao
+            uso excessivo de pesticidas, que afetam diretamente esses animais.
+            Muitas dessas espécies também precisam de centros de reabilitação e
+            santuários, especialmente os que foram vítimas de tráfico ou
+            destruição de habitat. Apoiar essas organizações com doações ou
+            voluntariado é uma maneira direta de ajudar na recuperação dos
+            animais. No mesmo sentido, devemos apoiar legislações que proíbam
+            cativeiros ilegais e garantam o bem-estar dos animais. A redução dos
+            impactos das atividades humanas, como expansão urbana, agricultura
+            intensiva e poluição, é igualmente importante. Ao promover práticas
+            mais sustentáveis, como agricultura regenerativa e redução das
+            emissões de poluentes, podemos diminuir os danos causados aos
+            habitats e às rotas migratórias desses animais. Por fim, é vital o
+            apoio à pesquisa científica e ao monitoramento contínuo dessas
+            espécies. A pesquisa permite entender melhor suas necessidades e
+            desenvolver estratégias de conservação mais eficazes. A colaboração
+            internacional também é essencial, especialmente no caso de espécies
+            como o lobo ou o urso-polar, que não reconhecem fronteiras
+            geográficas. Assim, a preservação desses animais depende da ação
+            coletiva e de um compromisso global para garantir que suas
+            populações se mantenham saudáveis e seus habitats sejam protegidos
+            para as gerações futuras.
+          </dd>
+        </dl>
+      </section>
+
+      <section class="grid-section numeros" data-anime="scroll">
+        <h1 class="titulo">Números</h1>
+        <div class="numeros-grid"></div>
+      </section>
+
+      <section class="grid-section contato" data-anime="scroll" id="contato">
+        <h1 class="titulo">Contato</h1>
+        <div
+          class="mapa"
+          data-tooltip
+          aria-label="Endereço próximo ao estacionamento."
+        >
+          <img src="img/mapa.png" alt="mapa" />
+        </div>
+        <ul class="dados">
+          <li>contato@animaisfantasticos.com</li>
+          <li>+55 (xx) XXXX-XXXX</li>
+          <li>Org - Animais Fantásticos</li>
+          <li>Minas Gerais</li>
+          <li>Doe <span class="btc-preco">0</span> bitcoin para nos ajudar</li>
+          <li data-semana="1,2,3,4,5" data-horario="8,18">
+            Seg à Sex das 8 às 18
+          </li>
+        </ul>
+      </section>
+
+      <footer class="copy">
+        <p>Todos os direitos reservados.</p>
+      </footer>
+    </div>
+
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button type="button" data-modal="fechar" class="fechar">X</button>
+        <form action="">
+          <label for="email">Email</label>
+          <input type="text" for="email" id="email" />
+          <label for="senha">Senha</label>
+          <input type="password" for="senha" id="senha" />
+          <button type="submit">Entrar</button>
+        </form>
       </div>
     </section>
-    <section class="grid-section faq js-scroll" id="faq">
-      <h1 class="titulo">FAQ</h1>
-      <dl class="faq-lista js-accordion">
-        <dt>Qual a idade dos animais?</dt>
-        <dd>
-          Em um refúgio de animais resgatados, diferentes espécies convivem em
-          segurança, longe das ameaças da natureza e da ação humana. Entre os
-          moradores mais astutos está a raposa, que na natureza vive apenas
-          entre 3 e 6 anos, mas em um ambiente protegido pode alcançar os 10 ou
-          até 12 anos. Sua cauda volumosa e seus olhos atentos fazem dela uma
-          figura curiosa e observadora entre os outros animais. Saltando entre
-          os galhos, os esquilos dão vida ao santuário com sua energia
-          constante. Enquanto na natureza vivem de 5 a 10 anos, aqui podem
-          ultrapassar os 12 ou até 15 anos, graças à alimentação regular e à
-          ausência de predadores. Já os imponentes ursos, como o urso-pardo ou o
-          urso-negro, vivem em média 20 a 25 anos no mundo selvagem, mas em
-          cativeiro seguro podem atingir até 35 anos, envelhecendo com dignidade
-          e tranquilidade. Na parte mais silenciosa do abrigo, os lobos se
-          mantêm atentos, sempre em grupo. Costumam viver de 6 a 8 anos na
-          natureza, mas sob cuidados humanos chegam facilmente aos 12 ou 15. Os
-          macacos, com sua variedade de espécies, têm diferentes expectativas:
-          um macaco-prego, por exemplo, pode viver até 20 anos solto e mais de
-          40 em cativeiro. Já os leões, reis da savana, encontram aqui um novo
-          reino. Enquanto na natureza vivem de 10 a 14 anos, neste refúgio
-          alguns alcançam ou superam os 20 anos, rugindo mais baixo, mas com a
-          mesma imponência de sempre.
-        </dd>
-        <dt>Eles são fantásticos?</dt>
-        <dd>
-          Esses animais são realmente fantásticos por suas características
-          únicas e seu papel essencial na natureza. A raposa se destaca pela
-          astúcia e adaptabilidade, vivendo em ambientes variados e caçando de
-          forma estratégica. Os esquilos, pequenos e ágeis, ajudam a regenerar
-          as florestas ao espalhar sementes, além de serem muito organizados ao
-          armazenar seu alimento. Já os ursos unem força e sensibilidade,
-          mostrando comportamentos complexos como o cuidado com os filhotes e a
-          memória de locais ricos em alimento. Os lobos impressionam pela vida
-          social estruturada em matilhas, onde a comunicação e a cooperação são
-          fundamentais para a sobrevivência e a caça em grupo. Os macacos,
-          inteligentes e sociáveis, utilizam ferramentas, aprendem com seus
-          pares e demonstram emoções que refletem sua proximidade evolutiva
-          conosco. Por fim, o leão simboliza força e coragem, vivendo em grupos
-          protegidos e impondo respeito com seu rugido poderoso e sua postura
-          nobre. Juntos, esses animais não só enriquecem os ecossistemas em que
-          vivem, mas também inspiram o ser humano pela sua inteligência,
-          organização e beleza, mostrando como a diversidade da vida é
-          surpreendente e essencial para o equilíbrio do planeta.
-        </dd>
-        <dt>Qual a diferença?</dt>
-        <dd>
-          Esses animais são bastante diferentes entre si, tanto em aparência
-          quanto em comportamento e habitat. As raposas são canídeos esguios,
-          solitários e adaptáveis, que vivem em vários ambientes e caçam
-          principalmente sozinhas. Já os esquilos são roedores pequenos e ágeis,
-          especializados em viver nas árvores e armazenar alimentos, com uma
-          dieta mais voltada para sementes e frutas. Os ursos são grandes
-          mamíferos onívoros, com força impressionante e hábitos que variam de
-          espécie para espécie, desde a alimentação quase exclusivamente vegetal
-          do panda até o estilo de vida do urso-polar, que é mais carnívoro.
-          Diferente deles, os lobos são animais sociais, vivem em matilhas e
-          dependem da caça cooperativa para capturar presas maiores. Os macacos,
-          por sua vez, são primatas muito inteligentes e sociais, que geralmente
-          vivem em grupos complexos e têm comportamentos sofisticados, como o
-          uso de ferramentas. Finalmente, os leões são grandes felinos que
-          também vivem em grupos, mas com uma organização social bem distinta,
-          onde as fêmeas caçam e os machos defendem o território. Enquanto
-          raposas e esquilos são pequenos e rápidos, ursos, lobos e leões são
-          maiores e mais fortes, cada um com estratégias e hábitos específicos
-          que refletem sua adaptação ao ambiente.
-        </dd>
-        <dt>Como proteger?</dt>
-        <dd>
-          Proteger esses animais é essencial para manter o equilíbrio ecológico
-          e garantir que eles continuem desempenhando seu papel vital na
-          natureza. A primeira medida crucial é a preservação dos habitats
-          naturais. Florestas, savanas e áreas selvagens precisam ser protegidas
-          contra o desmatamento e a degradação. Apoiar a criação de reservas
-          naturais, parques nacionais e corredores ecológicos ajuda a manter os
-          ecossistemas intactos, permitindo que essas espécies continuem vivendo
-          em seu ambiente natural. A caça ilegal e o tráfico de animais também
-          representam grandes ameaças. Muitas dessas espécies são perseguidas
-          por sua pele, partes do corpo ou simplesmente para o comércio ilegal.
-          Combater essa prática é fundamental, o que envolve aumentar a
-          fiscalização e apoiar campanhas de sensibilização pública sobre o
-          impacto negativo do tráfico e da caça ilegal. Além disso, a educação
-          ambiental desempenha um papel importante. Conscientizar a população
-          sobre a importância da biodiversidade e do respeito aos animais ajuda
-          a criar uma cultura de preservação. É essencial promover o uso
-          sustentável dos recursos naturais e o combate ao desmatamento e ao uso
-          excessivo de pesticidas, que afetam diretamente esses animais. Muitas
-          dessas espécies também precisam de centros de reabilitação e
-          santuários, especialmente os que foram vítimas de tráfico ou
-          destruição de habitat. Apoiar essas organizações com doações ou
-          voluntariado é uma maneira direta de ajudar na recuperação dos
-          animais. No mesmo sentido, devemos apoiar legislações que proíbam
-          cativeiros ilegais e garantam o bem-estar dos animais. A redução dos
-          impactos das atividades humanas, como expansão urbana, agricultura
-          intensiva e poluição, é igualmente importante. Ao promover práticas
-          mais sustentáveis, como agricultura regenerativa e redução das
-          emissões de poluentes, podemos diminuir os danos causados aos habitats
-          e às rotas migratórias desses animais. Por fim, é vital o apoio à
-          pesquisa científica e ao monitoramento contínuo dessas espécies. A
-          pesquisa permite entender melhor suas necessidades e desenvolver
-          estratégias de conservação mais eficazes. A colaboração internacional
-          também é essencial, especialmente no caso de espécies como o lobo ou o
-          urso-polar, que não reconhecem fronteiras geográficas. Assim, a
-          preservação desses animais depende da ação coletiva e de um
-          compromisso global para garantir que suas populações se mantenham
-          saudáveis e seus habitats sejam protegidos para as gerações futuras.
-        </dd>
-      </dl>
-    </section>
-    <section class="grid-section contato js-scroll" id="contato">
-      <h1 class="titulo">Contato</h1>
-      <div class="mapa">
-        <img src="img/mapa.png" alt="mapa" />
-      </div>
-      <ul class="dados">
-        <li>contato@contato.com</li>
-        <li>+55 (xx) x xxxx-xxxx</li>
-        <li>ORG - Animais Fantásticos</li>
-        <li>Minas Gerais - MG</li>
-      </ul>
-    </section>
-
-    <footer class="copy">
-      <p>Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
