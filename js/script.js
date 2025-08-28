@@ -42,7 +42,6 @@ const menuMobile = new MenuMobile("[data-menu='button']", "[data-menu='list']");
 menuMobile.init();
 
 const funcionamento = new Funcionamento("[data-semana]", 'aberto');
-console.log(funcionamento);
 funcionamento.init();
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid");
